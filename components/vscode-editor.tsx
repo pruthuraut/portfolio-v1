@@ -136,7 +136,7 @@ function ReadmeContent() {
             variant="outline"
             size="sm"
             className="gap-2 bg-transparent"
-            onClick={() => window.open("https://linkedin.com/in/pruthuraut", "_blank")}
+            onClick={() => window.open("https://linkedin.com/in/pruthu-raut", "_blank")}
           >
             <Linkedin className="w-4 h-4" />
             LinkedIn

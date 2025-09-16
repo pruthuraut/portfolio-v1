@@ -9,7 +9,7 @@ import "./globals.css"
 export const metadata: Metadata = {
   title: "Pruthu Raut - Cybersecurity Specialist",
   description: "Portfolio of Pruthu Raut - Security Researcher, Bug Bounty Hunter, and Cybersecurity Expert",
-  generator: "v0.app",
+  generator: "pruthu",
 }
 
 export default function RootLayout({
