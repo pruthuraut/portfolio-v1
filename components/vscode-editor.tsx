@@ -17,6 +17,8 @@ export function VSCodeEditor({ activeFile }: VSCodeEditorProps) {
         return <ExperienceContent />
       case "honeytrap.py":
         return <HoneyTrapContent />
+      case "vibeguard.md":
+        return <VibeGuardContent />
       case "obsidian-guard.js":
         return <ObsidianGuardContent />
       case "deep-recon.py":
@@ -76,7 +78,7 @@ function ReadmeContent() {
             <h3 className="font-semibold">Security Research</h3>
           </div>
           <p className="text-sm text-muted-foreground">
-            Discovered 30+ critical vulnerabilities across NASA, BBC, WHO, Apple
+            Reported 100+ vulnerabilities across 30+ enterprise programs including NASA, BBC, WHO, and Apple
           </p>
         </Card>
 
@@ -86,7 +88,7 @@ function ReadmeContent() {
             <h3 className="font-semibold">CTF Champion</h3>
           </div>
           <p className="text-sm text-muted-foreground">
-            Multiple CTF victories including HTB Mumbai, ACECTF, REDFOXCTF
+            HTB Mumbai, ACECTF, REDFOXCTF, and ABITRGIT wins
           </p>
         </Card>
 
@@ -95,7 +97,7 @@ function ReadmeContent() {
             <Bug className="w-5 h-5 text-[#ff073a]" />
             <h3 className="font-semibold">CVE Researcher</h3>
           </div>
-          <p className="text-sm text-muted-foreground">Published CVE-2025-46173 & CVE-2025-28121</p>
+            <p className="text-sm text-muted-foreground">Published CVE-2025-46173 and CVE-2025-28121</p>
         </Card>
       </div>
 
@@ -163,17 +165,24 @@ function ExperienceContent() {
       <pre className="text-foreground">
         {`{
   "current_position": {
-    "title": "Security Researcher",
-    "company": "Bugcrowd",
-    "location": "United States, Remote",
-    "duration": "Jan 2024 – Present",
+    "title": "Product Security Engineer Intern",
+    "company": "Illumio",
+    "location": "Sunnyvale, CA",
+    "duration": "May 2026 – Present",
     "achievements": [
-      "Discovered 30+ critical vulnerabilities (NASA, BBC, WHO, Apple)",
-      "Reported high-impact RCE, SQLi, and Blind SSRF vulnerabilities",
-      "Collaborated with security teams for remediation"
+      "Built an LLM-powered threat modeling and validation harness",
+      "Validated 500+ security findings across Linux and Windows binaries",
+      "Created secure-coding-by-default workflows with pre-commit hooks"
     ]
   },
   "previous_roles": [
+    {
+      "title": "Security Researcher",
+      "company": "Bugcrowd",
+      "location": "United States, Remote",
+      "duration": "Jan 2024 – Aug 2025",
+      "focus": ["RCE", "SQL Injection", "Blind SSRF", "Responsible Disclosure"]
+    },
     {
       "title": "Windows Internals Security Researcher Intern",
       "company": "CoE-CNDS Labs",
@@ -197,6 +206,32 @@ function ExperienceContent() {
   }
 }`}
       </pre>
+    </div>
+  )
+}
+
+function VibeGuardContent() {
+  return (
+    <div className="font-mono text-sm space-y-5">
+      <div className="text-muted-foreground"># vibeguard.md - Secure coding agent</div>
+      <Card className="p-5 bg-card/60 cyber-border">
+        <div className="flex items-start justify-between gap-4 mb-5">
+          <div>
+            <p className="text-xs text-primary mb-2">IN-REPO SECURITY CONTROL PLANE</p>
+            <h2 className="text-2xl font-bold">VibeGuard</h2>
+          </div>
+          <Shield className="w-7 h-7 text-[#39ff14]" />
+        </div>
+        <p className="text-muted-foreground leading-7 max-w-2xl">
+          A secure coding agent that sits inside the repository, guides LLM-generated code toward safer patterns, and blocks vulnerable changes before they reach the codebase.
+        </p>
+        <div className="grid md:grid-cols-3 gap-3 mt-6">
+          <div className="rounded border border-border bg-background/70 p-3"><p className="text-primary text-xs mb-1">01 / GUARD</p><p className="text-xs text-muted-foreground">Secure-by-default prompts and code review guardrails.</p></div>
+          <div className="rounded border border-border bg-background/70 p-3"><p className="text-primary text-xs mb-1">02 / BLOCK</p><p className="text-xs text-muted-foreground">Pre-commit hooks stop vulnerable patterns before merge.</p></div>
+          <div className="rounded border border-border bg-background/70 p-3"><p className="text-primary text-xs mb-1">03 / SUPPLY</p><p className="text-xs text-muted-foreground">SCA checks and safer dependency selection in the loop.</p></div>
+        </div>
+        <div className="flex flex-wrap gap-2 mt-6"><Badge variant="secondary">LLM guardrails</Badge><Badge variant="secondary">Pre-commit</Badge><Badge variant="secondary">SCA</Badge><Badge variant="secondary">Secure dependencies</Badge></div>
+      </Card>
     </div>
   )
 }

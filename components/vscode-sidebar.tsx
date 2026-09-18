@@ -44,6 +44,7 @@ export function VSCodeSidebar({ activeFile, onFileSelect, onTerminalToggle }: VS
       type: "folder",
       children: [
         { name: "honeytrap.py", icon: Shield, type: "file" },
+        { name: "vibeguard.md", icon: Shield, type: "file" },
         { name: "obsidian-guard.js", icon: Shield, type: "file" },
         { name: "deep-recon.py", icon: Bug, type: "file" },
         { name: "rakshak-ml.py", icon: Shield, type: "file" },

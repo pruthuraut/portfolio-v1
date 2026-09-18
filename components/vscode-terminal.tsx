@@ -62,8 +62,8 @@ export function VSCodeTerminal({ onClose }: VSCodeTerminalProps) {
       case "cat experience.json":
         return [
           "{",
-          '  "current_position": "Security Researcher @ Bugcrowd",',
-          '  "achievements": ["30+ critical vulnerabilities", "NASA, BBC, WHO, Apple"],',
+          '  "current_position": "Product Security Engineer Intern @ Illumio",',
+          '  "achievements": ["100+ vulnerabilities reported", "500+ findings validated", "NASA, BBC, WHO, Apple"],',
           '  "specialties": ["RCE", "SQLi", "SSRF", "Exploit Development"],',
           '  "education": "M.Eng. Cybersecurity - University of Maryland",',
           '  "certifications": ["CEH", "eJPT v2"]',
